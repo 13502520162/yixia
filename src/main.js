@@ -9,6 +9,7 @@ import 'styles/border.css'
 import 'styles/iconfont.css'
 
 Vue.config.productionTip = false
+Vue.use(router)
 Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */

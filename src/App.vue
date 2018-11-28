@@ -42,6 +42,7 @@ export default {
   position: fixed;
   bottom: 0;
   left: 0;
+  background: #fff;
   .item {
     box-sizing: border-box;
     flex: 1;
