@@ -6,13 +6,13 @@
 
 <script type="text/ecmascript-6">
 export default {
-  data() {
+  data () {
     return {
-        msg:'我的'
-    };
+      msg: '我的'
+    }
   },
   components: {}
-};
+}
 </script>
 
 <style scoped>

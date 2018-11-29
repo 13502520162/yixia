@@ -19,17 +19,12 @@
 </template>
 
 <script>
-import home from "@/components/home/home";
-import credit from "@/components/credit/credit";
-import my from "@/components/my/my";
+
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    home,
-    credit,
-    my
   }
-};
+}
 </script>
 
 <style scoped lang='less'>

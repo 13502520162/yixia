@@ -34,9 +34,15 @@
     </div>
     <div class="loan-details">
       <div class="loan-details-top">
-        <div>热门推荐</div>
-        <div>极速放款</div>
-        <div>高额贷款</div>
+        <router-link tag="div" to='/home/popular'>
+          <i class="iconfont one">&#xe606;</i> 热门推荐
+        </router-link>
+        <router-link tag="div" to='/home/extremespeed'>
+          <i class="iconfont two">&#xe6b9;</i> 极速放款
+        </router-link>
+        <router-link tag="div" to='/home/highvolume'>
+          <i class="iconfont three">&#xe6a0;</i> 高额贷款
+        </router-link>
       </div>
       <div class="loan-details-bottom">
         <div class="loan-daquan">
@@ -47,10 +53,16 @@
           <div class="latest-online">
             <p class="title">最新上线</p>
             <p class="detail">优惠多，降息大</p>
+            <p class="icon">
+              <i class="iconfont">&#xe646;</i>
+            </p>
           </div>
           <div class="intelligent-loan-selection">
             <p class="title">智能选贷款</p>
             <p class="detail">为你量身定做</p>
+            <p class="icon">
+              <i class="iconfont">&#xe671;</i>
+            </p>
           </div>
         </div>
       </div>
@@ -60,92 +72,40 @@
         <span class="title-other">其他推荐</span>
         <span class="title-more">更多 ></span>
       </div>
-      <div class="content">
-        <ul>
-          <li class="content-li">
-            <div class="left">
-              <div class="left-top">
-                <img class="left-top-img" src="../../assets/images/dai.png" alt>
-                <div class="left-top-con">
-                  <p class="tit">你我贷</p>
-                  <p class="content">
-                    日利率:
-                    <span>0.02-01%</span>
-                  </p>
-                </div>
-              </div>
-              <div class="left-bottom">
-                <span>高额度</span>
-                <span>放款快</span>
-                <span>极速到账</span>
-              </div>
-            </div>
-            <div class="right">
-              <p class="maximum-borrowable">最高可借</p>
-              <p class="money">￥30,000</p>
-              <p class="immediate-borrowing">立即借款</p>
-            </div>
-          </li>
-          <li class="content-li">
-            <div class="left">
-              <div class="left-top">
-                <img class="left-top-img" src="../../assets/images/dai.png" alt>
-                <div class="left-top-con">
-                  <p class="tit">你我贷</p>
-                  <p class="content">
-                    日利率:
-                    <span>0.02-01%</span>
-                  </p>
-                </div>
-              </div>
-              <div class="left-bottom">
-                <span>高额度</span>
-                <span>放款快</span>
-                <span>极速到账</span>
-              </div>
-            </div>
-            <div class="right">
-              <p class="maximum-borrowable">最高可借</p>
-              <p class="money">￥30,000</p>
-              <p class="immediate-borrowing">立即借款</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <cont></cont>
     </div>
   </div>
 </template>
 
 <script type="text/ecmascript-6">
-import BScroll from 'better-scroll';
+import cont from '@/components/home/contentA'
 export default {
   data () {
     return {
       swiperOption: {
         autoplay: 3000
       }
-    };
+    }
   },
-  mounted () {
-    this.$nextTick( () => {
-     this.scroll = new BScroll(this.$refs.home);
-    });
-  },
-  components: {}
-};
+  components: {
+    cont
+  }
+}
 </script>
 
 <style scoped lang='less'>
 .home {
   height: calc(100% - 1rem);
-
+  overflow: hidden;
+  padding-bottom: 1rem;
 }
 .search {
   position: fixed;
   width: 100%;
-  top: 0.2rem;
   z-index: 3;
+  padding: 0.2rem;
   padding-left: 0.5rem;
+  background: #059ff9;
   input {
     width: 70%;
     border-radius: 0.2rem;
@@ -240,6 +200,19 @@ export default {
       height: 100%;
       text-align: center;
       display: inline-block;
+      i {
+        font-size: 0.45rem;
+        vertical-align: top;
+      }
+      .one {
+        color: red;
+      }
+      .two {
+        color: #188ae2;
+      }
+      .three {
+        color: red;
+      }
     }
   }
   .loan-details-bottom {
@@ -264,6 +237,22 @@ export default {
         padding-top: 0.25rem;
         padding-left: 0.1rem;
         box-sizing: border-box;
+        position: relative;
+        .icon {
+          position: absolute;
+          right: 0.1rem;
+          bottom: 0.1rem;
+          width: 0.8rem;
+          height: 0.8rem;
+          line-height: 0.8rem;
+          text-align: center;
+          background: rgb(249, 236, 220);
+          border-radius: 50%;
+          i {
+            font-size: 0.5rem;
+            color: red;
+          }
+        }
       }
       .intelligent-loan-selection {
         height: 45%;
@@ -272,6 +261,22 @@ export default {
         padding-top: 0.32rem;
         padding-left: 0.1rem;
         box-sizing: border-box;
+        position: relative;
+        .icon {
+          position: absolute;
+          right: 0.1rem;
+          bottom: 0.1rem;
+          width: 0.8rem;
+          height: 0.8rem;
+          line-height: 0.8rem;
+          text-align: center;
+          background: rgb(204, 245, 251);
+          border-radius: 50%;
+          i {
+            font-size: 0.5rem;
+            color: #059ff9;
+          }
+        }
       }
     }
   }
@@ -302,6 +307,7 @@ export default {
       display: flex;
       .left {
         flex: 1;
+        border-right: 1px solid rgb(189, 189, 189);
         .left-top {
           box-sizing: border-box;
           .left-top-img {
@@ -342,6 +348,8 @@ export default {
           color: #fff;
           border-radius: 4px;
           height: 0.6rem;
+          width: 1.4rem;
+          margin-left: 0.8rem;
         }
       }
     }
