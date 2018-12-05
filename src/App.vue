@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="fixed">
+    <div class="fixed" v-show='show'>
       <router-link to="/home" tag="div" class="item">
         <i class="iconfont">&#xe62e;</i>
         <p>首页</p>
@@ -22,6 +22,12 @@
 
 export default {
   name: 'App',
+  props: {
+    show: {
+      type: Boolean,
+      default: true
+    }
+  },
   components: {
   }
 }

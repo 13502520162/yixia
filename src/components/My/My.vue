@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-      {{msg}}
+   <input type="file" accept="image/*">  
   </div>
 </template>
 

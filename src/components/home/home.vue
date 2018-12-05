@@ -14,7 +14,24 @@
             >
           </div>
         </swiper-slide>
+        <swiper-slide>
+          <div class="banner-title"></div>
+          <div class="banner-content">
+            <img
+              src="http://img1.qunarzz.com/piao/fusion/1802/42/7c92b9a381e46402.jpg_640x200_1cdce2a4.jpg"
+            >
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="banner-title"></div>
+          <div class="banner-content">
+            <img
+              src="http://img1.qunarzz.com/piao/fusion/1802/51/e78f936a5b404102.jpg_640x200_c14f0b3a.jpg"
+            >
+          </div>
+        </swiper-slide>
       </swiper>
+      <div class="swiper-pagination"></div>
     </div>
     <div class="headlines">
       <div class="headlines-tit">
@@ -34,13 +51,13 @@
     </div>
     <div class="loan-details">
       <div class="loan-details-top">
-        <router-link tag="div" to='/home/popular'>
+        <router-link tag="div" to="/home/popular">
           <i class="iconfont one">&#xe606;</i> 热门推荐
         </router-link>
-        <router-link tag="div" to='/home/extremespeed'>
+        <router-link tag="div" to="/home/extremespeed">
           <i class="iconfont two">&#xe6b9;</i> 极速放款
         </router-link>
-        <router-link tag="div" to='/home/highvolume'>
+        <router-link tag="div" to="/home/highvolume">
           <i class="iconfont three">&#xe6a0;</i> 高额贷款
         </router-link>
       </div>
@@ -83,7 +100,9 @@ export default {
   data () {
     return {
       swiperOption: {
-        autoplay: 3000
+        pagination: '.swiper-pagination',
+        loop: true,
+        autoplay: 100
       }
     }
   },
@@ -94,6 +113,9 @@ export default {
 </script>
 
 <style scoped lang='less'>
+.swiper-container{
+  overflow:initial;
+}
 .home {
   height: calc(100% - 1rem);
   overflow: hidden;
