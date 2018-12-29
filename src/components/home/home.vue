@@ -10,7 +10,7 @@
           <div class="banner-title"></div>
           <div class="banner-content">
             <img
-              src="http://img1.qunarzz.com/piao/fusion/1801/1a/94428c6dea109402.jpg_640x200_2cf590d8.jpg"
+              src="../../assets/images/banner.png"
             >
           </div>
         </swiper-slide>
@@ -40,12 +40,12 @@
       </div>
       <div class="headlines-con">
         <p>
-          <span class="con-dai">贷款</span>
-          <span class="con-content">2分钟教你如何融360提额</span>
+          <span class="con-dai">多米</span>
+          <span class="con-content">稳、准、狠！选出合适的贷款产品！</span>
         </p>
         <p>
-          <span class="con-dai">贷款</span>
-          <span class="con-content">2分钟教你如何融360提额</span>
+          <span class="con-dai">多米</span>
+          <span class="con-content">个人信用贷款申请条件有哪些？</span>
         </p>
       </div>
     </div>
@@ -63,30 +63,33 @@
       </div>
       <div class="loan-details-bottom">
         <div class="loan-daquan">
-          <p class="title">贷款大全</p>
-          <p class="detail">海量产品任你选</p>
+       <!--   <p class="title">贷款大全</p>
+          <p class="detail">海量产品任你选</p>-->
+          <img src="../../assets/images/推荐.png" alt="">
         </div>
         <div class="loan-other">
           <div class="latest-online">
-            <p class="title">最新上线</p>
+           <!-- <p class="title">最新上线</p>
             <p class="detail">优惠多，降息大</p>
             <p class="icon">
               <i class="iconfont">&#xe646;</i>
-            </p>
+            </p>-->
+            <img src="../../assets/images/大额精选.png" alt="">
           </div>
           <div class="intelligent-loan-selection">
-            <p class="title">智能选贷款</p>
+         <!--   <p class="title">智能选贷款</p>
             <p class="detail">为你量身定做</p>
             <p class="icon">
               <i class="iconfont">&#xe671;</i>
-            </p>
+            </p>-->
+            <img src="../../assets/images/即刻申请.png" alt="">
           </div>
         </div>
       </div>
     </div>
     <div class="other-recommendations">
       <div class="title">
-        <span class="title-other">其他推荐</span>
+        <span class="title-other">推荐贷款</span>
         <span class="title-more">更多 ></span>
       </div>
       <cont></cont>
@@ -132,13 +135,12 @@ export default {
     width: 70%;
     border-radius: 0.2rem;
     text-align: center;
-    height: 0.5rem;
+    height: 0.4rem;
     color: #000;
   }
   .iconfont {
     float: right;
     margin-right: 0.8rem;
-    margin-top: 0.1rem;
     font-size: 0.4rem;
     color: #fff;
   }
@@ -197,6 +199,11 @@ export default {
   .headlines-con {
     flex: 1;
     background: #fff;
+    p{
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
     .con-dai {
       border: 1px solid rgb(109, 174, 222);
       font-size: 10px;
@@ -205,7 +212,7 @@ export default {
       vertical-align: top;
     }
     .con-content {
-      color: #999;
+      color: #333;
       display: inline-block;
       vertical-align: top;
     }
@@ -213,6 +220,7 @@ export default {
 }
 .loan-details {
   width: 100%;
+  margin-bottom: .5rem;
   .loan-details-top {
     height: 1rem;
     line-height: 1rem;
@@ -222,6 +230,7 @@ export default {
       height: 100%;
       text-align: center;
       display: inline-block;
+      font-weight: bold;
       i {
         font-size: 0.45rem;
         vertical-align: top;
@@ -247,7 +256,10 @@ export default {
       background: rgb(252, 231, 224);
       border-radius: 5px;
       margin-right: 0.3rem;
-      padding: 0.25rem 0 0 0.1rem;
+      img{
+        width: 100%;
+        height: 100%;
+      }
     }
     .loan-other {
       flex: 1;
@@ -256,10 +268,14 @@ export default {
         border-radius: 5px;
         background: rgb(255, 253, 230);
         margin-bottom: 0.3rem;
-        padding-top: 0.25rem;
-        padding-left: 0.1rem;
+/*        padding-top: 0.25rem;
+        padding-left: 0.1rem;*/
         box-sizing: border-box;
         position: relative;
+        img{
+          width: 100%;
+          height: 100%;
+        }
         .icon {
           position: absolute;
           right: 0.1rem;
@@ -280,10 +296,14 @@ export default {
         height: 45%;
         border-radius: 5px;
         background: rgb(231, 248, 255);
-        padding-top: 0.32rem;
-        padding-left: 0.1rem;
+/*        padding-top: 0.32rem;
+        padding-left: 0.1rem;*/
         box-sizing: border-box;
         position: relative;
+        img{
+          width: 100%;
+          height: 100%;
+        }
         .icon {
           position: absolute;
           right: 0.1rem;
@@ -312,14 +332,16 @@ export default {
   }
 }
 .other-recommendations {
+  background: #F8F7F9;
   .title {
     height: 1rem;
     line-height: 1rem;
     padding: 0 0.3rem;
+    color:#000;
+    font-weight: 700;
     border-bottom: 1px solid #e0e0e0;
     .title-more {
       float: right;
-      color: #999;
     }
   }
   .content {

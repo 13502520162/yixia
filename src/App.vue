@@ -7,7 +7,7 @@
       </router-link>
       <router-link to="/credit" tag="div" class="item">
         <i class="iconfont">&#xe64f;</i>
-        <p>信贷</p>
+        <p>贷款</p>
       </router-link>
       <router-link to="/my" tag="div" class="item">
         <i class="iconfont">&#xe62f;</i>

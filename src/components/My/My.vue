@@ -1,6 +1,6 @@
 <template>
   <div class="page">
-   <input type="file" accept="image/*">  
+   <input type="file" accept="image/*">
   </div>
 </template>
 

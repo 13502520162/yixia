@@ -8,7 +8,7 @@
 export default {
   data () {
     return {
-      msg: '我是信贷'
+      msg: '我是贷款'
     }
   },
   components: {}
