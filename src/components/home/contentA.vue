@@ -143,23 +143,29 @@ export default {
 
 <style scoped lang="less">
   .content {
+    padding: 0.3rem;
+    background:rgba(255,255,255,1);
     .content-li {
-      padding: 0.3rem;
-      border-bottom: 1px solid #e0e0e0;
+      padding: 0.2rem;
+      margin-bottom: .3rem;
       display: flex;
+      background:rgba(255,255,255,1);
+      box-shadow:0px 0px 6px 0px rgba(0,0,0,0.1);
+      border-radius:8px;
       .left {
         flex: 1;
         .left-top {
           box-sizing: border-box;
           .left-top-img {
             float: left;
-            width: .8rem;
+            width: 1.2rem;
           }
           .left-top-con {
             height: 100%;
             line-height: 0.45rem;
-            margin-left: .9rem;
+            margin-left: 1.1rem;
             .tit {
+              margin-left: 0.3rem;
               font-weight: 700;
               font-size: 16px;
             }
@@ -175,7 +181,13 @@ export default {
           margin-top: 0.12rem;
           color: rgb(148, 148, 148);
           span {
-            margin-right: 0.3rem;
+            border: 0.02rem solid #4886ff;
+            font-size: 10px;
+            color: #4886ff;
+            margin-right: 0.2rem;
+            vertical-align: middle;
+            padding: 0.05rem 0.08rem;
+            border-radius: 0.1rem;
           }
         }
       }
